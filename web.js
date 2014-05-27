@@ -17,7 +17,7 @@ var client = new pg.Client(params);
 client.connect();
 
 require("http").createServer(function(req, res) {
-  var url_parts = url.parse(request.url, true);
+  var url_parts = url.parse(req.url, true);
   var query = url_parts.query;
   if (query.ownid > 0 && query.uid > 0 && !query.save) {
     client.query("select * from mydata where ownid=" + query.ownid | 0 + " and uid=" + query.uid | 0, function(err, res) {
