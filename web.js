@@ -26,7 +26,7 @@ require("http").createServer(function(req, res) {
         } else {
           res.end("siker:" + JSON.stringify(result.rows[0]));
       }
-    }
+    });
   }else if(query.ownid > 0 && query.uid > 0 && !query.save){
     res.end("saveing...");
   }else{
