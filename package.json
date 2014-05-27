@@ -11,8 +11,6 @@
     "express": "3.4.x",
     "jade": "latest",
     "pg": "3.2.x",
-    "passport": "latest",
-    "passport-facebook": "latest",
     "async": "latest"
   },
   "engines": {

@@ -1,12 +1,10 @@
-var mongoose = require('mongoose')
-  , FacebookStrategy = require('passport-facebook').Strategy
-  , User = mongoose.model('User')
 
 
 module.exports = function (passport, config) {
   // require('./initializer')
 
   // serialize sessions
+  /*
   passport.serializeUser(function(user, done) {
     done(null, user.id)
   })
@@ -46,6 +44,6 @@ module.exports = function (passport, config) {
         }
       })
     }
-  ))
+  ))*/
 
   }
