@@ -1,6 +1,6 @@
 {
-  "name":    "friend-comments",
-  "version": "1.0",
+  "name":    "friend comments",
+  "version": "0.1.0",
 
   "description": "Comment for friends",
   "private":true,
@@ -11,7 +11,21 @@
     "express": "3.4.x",
     "jade": "latest",
     "pg": "3.2.x",
-    "async": "latest"
+    "connect-flash": "latest",
+    "passport": "latest",
+    "passport-facebook": "latest",
+    "imager": "latest",
+    "winston": "latest",
+    "notifier": "latest",
+    "async": "latest",
+    "view-helpers": "latest",
+    "forever": "latest"
+  },
+  "devDependencies": {
+    "supertest": "latest",
+    "should": "latest",
+    "mocha": "latest",
+    "nodemon": "latest"
   },
   "engines": {
     "node": "0.10.x"
