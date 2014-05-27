@@ -6,7 +6,7 @@
 
   "dependencies": {
   "pg": "0.6.15",
-  "url": "latest",
+  "url": "latest"
   },
 
   "engines": {
