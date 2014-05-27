@@ -11,21 +11,9 @@
     "express": "3.4.x",
     "jade": "latest",
     "pg": "3.2.x",
-    "connect-flash": "latest",
     "passport": "latest",
     "passport-facebook": "latest",
-    "imager": "latest",
-    "winston": "latest",
-    "notifier": "latest",
-    "async": "latest",
-    "view-helpers": "latest",
-    "forever": "latest"
-  },
-  "devDependencies": {
-    "supertest": "latest",
-    "should": "latest",
-    "mocha": "latest",
-    "nodemon": "latest"
+    "async": "latest"
   },
   "engines": {
     "node": "0.10.x"

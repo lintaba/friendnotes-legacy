@@ -5,7 +5,6 @@
 
 var express = require('express')
   , flash = require('connect-flash')
-  , helpers = require('view-helpers')
   , pkg = require('../package.json')
 
 var env = process.env.NODE_ENV || 'development'
@@ -60,7 +59,7 @@ module.exports = function (app, config, passport) {
     app.use(flash())
 
     // should be declared after session and flash
-    app.use(helpers(pkg.name))
+    /*app.use(helpers(pkg.name))
 
     // adds CSRF support
     if (process.env.NODE_ENV !== 'test') {
@@ -71,7 +70,7 @@ module.exports = function (app, config, passport) {
         res.locals.csrf_token = req.csrfToken()
         next()
       })
-    }
+    }*/
 
     // routes should be at the last
     app.use(app.router)
