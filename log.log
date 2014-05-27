@@ -1,0 +1,495 @@
+2014-05-27T11:59:06.796827+00:00 app[web.1]:       res.end("hiba");
+2014-05-27T11:59:06.802451+00:00 app[web.1]:     at emitReadable_ (_stream_readable.js:407:10)
+2014-05-27T11:59:06.802450+00:00 app[web.1]:     at Socket.EventEmitter.emit (events.js:92:17)
+2014-05-27T11:59:06.802453+00:00 app[web.1]:     at emitReadable (_stream_readable.js:403:5)
+2014-05-27T11:59:06.796527+00:00 app[web.1]: /app/web.js:20
+2014-05-27T11:59:08.175137+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-27T11:59:12.179549+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=d7a48cd0-7ad9-47c9-a5f3-25291964f38d fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T11:59:08.159680+00:00 heroku[web.1]: Process exited with status 8
+2014-05-27T12:00:28.662709+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-27T12:00:32.866880+00:00 app[web.1]: Listening on 37353
+2014-05-27T12:00:33.109920+00:00 heroku[web.1]: State changed from starting to up
+2014-05-27T12:00:31.447366+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T12:01:53.288198+00:00 heroku[api]: Starting process with command `node` by lintaba@gmail.com
+2014-05-27T12:01:56.923335+00:00 heroku[run.8460]: State changed from starting to up
+2014-05-27T12:01:56.801872+00:00 heroku[run.8460]: Starting process with command `node`
+2014-05-27T12:01:56.760599+00:00 heroku[run.8460]: Awaiting client
+2014-05-27T12:03:57.668281+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=GET path=/ host=lintabapp.herokuapp.com request_id=3643b124-eda4-4abb-ad46-b3ea84c97e2c fwd="92.249.185.97" dyno=web.1 connect=1ms service=38ms status=503 bytes=0
+2014-05-27T12:03:57.645805+00:00 app[web.1]: 
+2014-05-27T12:03:57.648475+00:00 app[web.1]:       res.end("hiba");
+2014-05-27T12:03:57.655333+00:00 app[web.1]:     at Socket.EventEmitter.emit (events.js:95:17)
+2014-05-27T12:03:57.655327+00:00 app[web.1]:     at p.handleError (/app/node_modules/pg/lib/query.js:87:10)
+2014-05-27T12:03:57.655328+00:00 app[web.1]:     at null.<anonymous> (/app/node_modules/pg/lib/client.js:130:24)
+2014-05-27T12:03:57.655330+00:00 app[web.1]:     at EventEmitter.emit (events.js:95:17)
+2014-05-27T12:03:57.648480+00:00 app[web.1]:           ^
+2014-05-27T12:03:57.655319+00:00 app[web.1]: TypeError: Cannot call method 'end' of undefined
+2014-05-27T12:03:57.655325+00:00 app[web.1]:     at null.callback (/app/web.js:20:11)
+2014-05-27T12:03:57.655332+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/pg/lib/connection.js:47:12)
+2014-05-27T12:03:57.655335+00:00 app[web.1]:     at Socket.<anonymous> (_stream_readable.js:745:14)
+2014-05-27T12:03:57.647760+00:00 app[web.1]: /app/web.js:20
+2014-05-27T12:03:57.655339+00:00 app[web.1]:     at emitReadable (_stream_readable.js:403:5)
+2014-05-27T12:03:57.655338+00:00 app[web.1]:     at emitReadable_ (_stream_readable.js:407:10)
+2014-05-27T12:03:57.655336+00:00 app[web.1]:     at Socket.EventEmitter.emit (events.js:92:17)
+2014-05-27T12:03:59.041934+00:00 heroku[web.1]: Process exited with status 8
+2014-05-27T12:03:59.052207+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-27T12:04:03.021786+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=0df74325-1e99-4e4f-a6aa-95ba058c1c2d fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T12:05:19.640704+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=lintabapp.herokuapp.com request_id=f4dbedc3-f05c-46bd-ab9a-b79a152969c3 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T12:05:20.009207+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=95cbec0c-84b2-4660-85c9-c58cd00258c6 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T12:06:27.567635+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=lintabapp.herokuapp.com request_id=44d7d9fb-92d7-4cd9-bc2f-07c48e2b1c27 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T12:06:27.927679+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=4cad39ed-d2ed-4864-91f7-7784cabb26ba fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T12:07:03.469006+00:00 heroku[ru
+n.8460]: State changed from up to complete
+2014-05-27T12:07:03.456313+00:00 heroku[run.8460]: Process exited with status 0
+2014-05-27T12:07:09.518262+00:00 heroku[api]: Starting process with command `node` by lintaba@gmail.com
+2014-05-27T12:07:12.307670+00:00 heroku[run.7290]: State changed from starting to up
+2014-05-27T12:07:12.286377+00:00 heroku[run.7290]: Awaiting client
+2014-05-27T12:07:12.341312+00:00 heroku[run.7290]: Starting process with command `node`
+2014-05-27T12:11:14.875861+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-27T12:11:16.688225+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T12:11:17.863856+00:00 app[web.1]: Listening on 3177
+2014-05-27T12:11:18.052470+00:00 heroku[web.1]: State changed from starting to up
+2014-05-27T12:13:38.211017+00:00 heroku[run.7290]: State changed from up to complete
+2014-05-27T12:13:38.199226+00:00 heroku[run.7290]: Process exited with status 0
+2014-05-27T12:25:25.997392+00:00 heroku[api]: Starting process with command `bash` by lintaba@gmail.com
+2014-05-27T12:25:28.483683+00:00 heroku[run.5704]: State changed from starting to up
+2014-05-27T12:25:28.453014+00:00 heroku[run.5704]: Starting process with command `bash`
+2014-05-27T12:25:28.382378+00:00 heroku[run.5704]: Awaiting client
+2014-05-27T12:29:37+00:00 heroku[slug-compiler]: Slug compilation started
+2014-05-27T12:29:45+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-05-27T12:29:45.563492+00:00 heroku[web.1]: State changed from up to starting
+2014-05-27T12:29:45.442816+00:00 heroku[api]: Release v10 created by lintaba@gmail.com
+2014-05-27T12:29:45.442816+00:00 heroku[api]: Deploy 31bd330 by lintaba@gmail.com
+2014-05-27T12:29:48.387586+00:00 app[web.1]: 
+2014-05-27T12:29:48.389906+00:00 app[web.1]: module.js:340
+2014-05-27T12:29:48.393197+00:00 app[web.1]:     at Function.Module._resolveFilename (module.js:338:15)
+2014-05-27T12:29:48.393205+00:00 app[web.1]:     at Module._compile (module.js:456:26)
+2014-05-27T12:29:48.393206+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2014-05-27T12:29:48.393208+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2014-05-27T12:29:48.393210+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2014-05-27T12:29:48.393211+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2014-05-27T12:29:48.389914+00:00 app[web.1]:     throw err;
+2014-05-27T12:29:48.393199+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2014-05-27T12:29:48.389916+00:00 app[web.1]:           ^
+2014-05-27T12:29:48.393202+00:00 app[web.1]:     at require (module.js:380:17)
+2014-05-27T12:29:48.393194+00:00 app[web.1]: Error: Cannot find module 'utils-merge'
+2014-05-27T12:29:48.393198+00:00 app[web.1]:     at Function.Module._load (module.js:280:25)
+2014-05-27T12:29:48.393203+00:00 app[web.1]:     at Object.<anonymous> (/app/node_modules/express/lib/express.js:6:13)
+2014-05-27T12:29:49.787877+00:00 heroku[web.1]: Process exited with status 8
+2014-05-27T12:29:47.500282+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T12:29:49.801805+00:00 heroku[web.1]: State changed from starting to crashed
+2014-05-27T12:29:49.802829+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-27T12:29:51.485488+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T12:29:52.686967+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2014-05-27T12:29:52.682170+00:00 app[web.1]: 
+2014-05-27T12:29:52.683250+00:00 app[web.1]:     throw err;
+2014-05-27T12:29:52.686972+00:00 app[web.1]:     at Module._compile (module.js:456:26)
+2014-05-27T12:29:52.686974+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2014-05-27T12:29:52.683465+00:00 app[web.1]:           ^
+2014-05-27T12:29:52.686961+00:00 app[web.1]: Error: Cannot find module 'utils-merge'
+2014-05-27T12:29:52.686971+00:00 app[web.1]:     at Object.<anonymous> (/app/node_modules/express/lib/express.js:6:13)
+2014-05-27T12:29:52.686964+00:00 app[web.1]:     at Function.Module._resolveFilename (module.js:338:15)
+2014-05-27T12:29:52.686965+00:00 app[web.1]:     at Function.Module._load (module.js:280:25)
+2014-05-27T12:29:52.686969+00:00 app[web.1]:     at require (module.js:380:17)
+2014-05-27T12:29:52.686975+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2014-05-27T12:29:52.686977+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2014-05-27T12:29:52.686978+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2014-05-27T12:29:52.682838+00:00 app[web.1]: module.js:340
+2014-05-27T12:29:54.025268+00:00 heroku[web.1]: State changed from starting to crashed
+2014-05-27T12:29:54.015385+00:00 heroku[web.1]: Process exited with status 8
+2014-05-27T12:30:01.247936+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=lintabapp.herokuapp.com request_id=3d9c3f96-3c97-4e8a-a3dd-295041f92e4c fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T12:30:01.844104+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=5dff7a4c-7881-40af-ac7f-3a979e4f46c6 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T12:30:49.575845+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2014-05-27T12:30:51.531851+00:00 heroku[web.1]: Process exited with status 143
+2014-05-27T12:33:35+00:00 heroku[slug-compiler]: Slug compilation started
+2014-05-27T12:33:43.233946+00:00 heroku[api]: Deploy a347f8a by lintaba@gmail.com
+2014-05-27T12:33:43+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-05-27T12:33:43.380800+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-27T12:33:43.234135+00:00 heroku[api]: Release v11 created by lintaba@gmail.com
+2014-05-27T12:33:48.000131+00:00 app[web.1]: { domain: null,
+2014-05-27T12:33:48.000150+00:00 app[web.1]:   _events: {},
+2014-05-27T12:33:48.000152+00:00 app[web.1]:   _maxListeners: 10,
+2014-05-27T12:33:48.000154+00:00 app[web.1]:   user: 'sqgkvzosmjvier',
+2014-05-27T12:33:48.000155+00:00 app[web.1]:   database: 'd24odihcp1223b',
+2014-05-27T12:33:48.000157+00:00 app[web.1]:   port: 5432,
+2014-05-27T12:33:48.000158+00:00 app[web.1]:   host: 'ec2-54-221-227-25.compute-1.amazonaws.com',
+2014-05-27T12:33:48.000160+00:00 app[web.1]:   connection: 
+2014-05-27T12:33:48.000161+00:00 app[web.1]:    { domain: null,
+2014-05-27T12:33:48.000163+00:00 app[web.1]:      _events: 
+2014-05-27T12:33:48.000164+00:00 app[web.1]:       { connect: [Function],
+2014-05-27T12:33:48.000166+00:00 app[web.1]:         authenticationCleartextPassword: [Function],
+2014-05-27T12:33:48.000168+00:00 app[web.1]:         authenticationMD5Password: [Function],
+2014-05-27T12:33:48.000169+00:00 app[web.1]:         backendKeyData: [Object],
+2014-05-27T12:33:48.000171+00:00 app[web.1]:         readyForQuery: [Object],
+2014-05-27T12:33:48.000172+00:00 app[web.1]:         error: [Function],
+2014-05-27T12:33:48.000173+00:00 app[web.1]:         notice: [Function] },
+2014-05-27T12:33:48.000175+00:00 app[web.1]:      _maxListeners: 10,
+2014-05-27T12:33:48.000176+00:00 app[web.1]:      stream: 
+2014-05-27T12:33:48.000177+00:00 app[web.1]:       { _connecting: true,
+2014-05-27T12:33:48.000179+00:00 app[web.1]:         _handle: [Object],
+2014-05-27T12:33:48.000180+00:00 app[web.1]:         _readableState: [Object],
+2014-05-27T12:33:48.000181+00:00 app[web.1]:         readable: true,
+2014-05-27T12:33:48.000183+00:00 app[web.1]:         domain: null,
+2014-05-27T12:33:48.000184+00:00 app[web.1]:         _events: [Object],
+2014-05-27T12:33:48.000185+00:00 app[web.1]:         _maxListeners: 10,
+2014-05-27T12:33:48.000186+00:00 app[web.1]:         _writableState: [Object],
+2014-05-27T12:33:48.000188+00:00 app[web.1]:         writable: true,
+2014-05-27T12:33:48.000189+00:00 app[web.1]:         allowHalfOpen: false,
+2014-05-27T12:33:48.000190+00:00 app[web.1]:         onend: null,
+2014-05-27T12:33:48.000192+00:00 app[web.1]:         destroyed: false,
+2014-05-27T12:33:48.000193+00:00 app[web.1]:         bytesRead: 0,
+2014-05-27T12:33:48.000194+00:00 app[web.1]:         _bytesDispatched: 0,
+2014-05-27T12:33:48.000196+00:00 app[web.1]:         _pendingData: null,
+2014-05-27T12:33:48.000197+00:00 app[web.1]:         _pendingEncoding: '',
+2014-05-27T12:33:48.000198+00:00 app[web.1]:         pipe: [Function],
+2014-05-27T12:33:48.000201+00:00 app[web.1]:         addListener: [Function],
+2014-05-27T12:33:48.000202+00:00 app[web.1]:         on: [Function],
+2014-05-27T12:33:48.000203+00:00 app[web.1]:         pause: [Function],
+2014-05-27T12:33:48.000205+00:00 app[web.1]:         resume: [Function],
+2014-05-27T12:33:48.000206+00:00 app[web.1]:         read: [Function],
+2014-05-27T12:33:48.000207+00:00 app[web.1]:         _consuming: true },
+2014-05-27T12:33:48.000209+00:00 app[web.1]:      lastBuffer: false,
+2014-05-27T12:33:48.000210+00:00 app[web.1]:      lastOffset: 0,
+2014-05-27T12:33:48.000211+00:00 app[web.1]:      buffer: null,
+2014-05-27T12:33:48.000212+00:00 app[web.1]:      offset: null,
+2014-05-27T12:33:48.000214+00:00 app[web.1]:      encoding: 'utf8',
+2014-05-27T12:33:48.000215+00:00 app[web.1]:      parsedStatements: {},
+2014-05-27T12:33:48.000216+00:00 app[web.1]:      writer: 
+2014-05-27T12:33:48.000217+00:00 app[web.1]:       { size: 1024,
+2014-05-27T12:33:48.000219+00:00 app[web.1]:         buffer: <Buffer 00 00 00 00 00 00 00 00 70 60 96 00 00 00 00 00 6b 00 00 00 6c 00 00 00 38 80 ca 02 00 00 00 00 20 92 ce 02 00 00 00 00 00 00 00 00 79 19 00 00 50 11 cd ...>,
+2014-05-27T12:33:48.000221+00:00 app[web.1]:         offset: 5,
+2014-05-27T12:33:48.000222+00:00 app[web.1]:         headerPosition: 0 } },
+2014-05-27T12:33:48.000223+00:00 app[web.1]:   queryQueue: [],
+2014-05-27T12:33:48.000225+00:00 app[web.1]:   password: 'yUqd8Z4m_4yVk_jwLq-8sQx41l',
+2014-05-27T12:33:48.000226+00:00 app[web.1]:   binary: false,
+2014-05-27T12:33:48.000227+00:00 app[web.1]:   encoding: 'utf8',
+2014-05-27T12:33:48.000228+00:00 app[web.1]:   processID: null,
+2014-05-27T12:33:48.000230+00:00 app[web.1]:   secretKey: null }
+2014-05-27T12:33:48.021353+00:00 app[web.1]: listening on  24153
+2014-05-27T12:33:48.212004+00:00 heroku[web.1]: State changed from starting to up
+2014-05-27T12:33:45.733251+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T12:34:06.580860+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=GET path=/ host=lintabapp.herokuapp.com request_id=0048c35a-4fc9-4fe0-9588-40f963643916 fwd="92.249.185.97" dyno=web.1 connect=1ms service=14ms status=503 bytes=0
+2014-05-27T12:34:06.577960+00:00 app[web.1]: /app/web.js:13
+2014-05-27T12:34:06.579522+00:00 app[web.1]:                                                               ^
+2014-05-27T12:34:06.577630+00:00 app[web.1]: 
+2014-05-27T12:34:06.578369+00:00 app[web.1]: require("http").createServer(function(req,res){res.write(JSON.stringify(client
+2014-05-27T12:34:06.583405+00:00 app[web.1]: TypeError: Converting circular structure to JSON
+2014-05-27T12:34:06.583408+00:00 app[web.1]:     at Object.stringify (native)
+2014-05-27T12:34:06.583410+00:00 app[web.1]:     at Server.<anonymous> (/app/web.js:13:63)
+2014-05-27T12:34:06.583412+00:00 app[web.1]:     at Server.EventEmitter.emit (events.js:98:17)
+2014-05-27T12:34:06.583413+00:00 app[web.1]:     at HTTPParser.parser.onIncoming (http.js:2108:12)
+2014-05-27T12:34:06.583415+00:00 app[web.1]:     at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:121:23)
+2014-05-27T12:34:06.583417+00:00 app[web.1]:     at Socket.socket.ondata (http.js:1966:22)
+2014-05-27T12:34:06.583418+00:00 app[web.1]:     at TCP.onread (net.js:527:27)
+2014-05-27T12:34:07.785202+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-27T12:34:11.967251+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=cdad5128-34cb-42c2-9dcd-9ccf3740eb9e fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T12:34:07.779334+00:00 heroku[web.1]: Process exited with status 8
+2014-05-27T12:37:25+00:00 app[pgbackups]: Started:  Tue May 27 12:37:25 UTC 2014
+2014-05-27T12:37:25+00:00 app[pgbackups]: Location: 218ccc19-3f17-4d42-aaea-836ecc9283f7:/tmp/fv59TUDHUc
+2014-05-27T12:37:25+00:00 app[pgbackups]: psql: bin//pg-latest/psql
+2014-05-27T12:37:25+00:00 app[pgbackups]: pv: bin//pv-latest
+2014-05-27T12:37:26+00:00 app[pgbackups]: pg_dump: env LD_LIBRARY_PATH=bin//9.3 bin//9.3/pg_dump
+2014-05-27T12:37:26+00:00 app[pgbackups]:  Schema | Name | Type | Info 
+2014-05-27T12:37:26+00:00 app[pgbackups]: --------+------+------+------
+2014-05-27T12:37:26+00:00 app[pgbackups]: (0 rows)
+2014-05-27T12:37:26+00:00 app[pgbackups]: 
+2014-05-27T12:37:26+00:00 app[pgbackups]: ------
+2014-05-27T12:37:26+00:00 app[pgbackups]:  
+2014-05-27T12:37:26+00:00 app[pgbackups]: (1 row)'
+2014-05-27T12:37:26+00:00 app[pgbackups]: ------
+2014-05-27T12:37:26+00:00 app[pgbackups]:  
+2014-05-27T12:37:26+00:00 app[pgbackups]: (1 row)'
+2014-05-27T12:37:26+00:00 app[pgbackups]: ------
+2014-05-27T12:37:26+00:00 app[pgbackups]:  
+2014-05-27T12:37:26+00:00 app[pgbackups]: (1 row) == *true* ]]
+2014-05-27T12:37:26+00:00 app[pgbackups]: ------
+2014-05-27T12:37:26+00:00 app[pgbackups]:  
+2014-05-27T12:37:26+00:00 app[pgbackups]: (1 row) == *true* ]]
+2014-05-27T12:37:26+00:00 app[pgbackups]: dump_progress: start
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading schemas
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined tables
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading extensions
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined functions
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined types
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading procedural languages
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined aggregate functions
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined operators
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined operator classes
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined operator families
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined text search parsers
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined text search templates
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined text search dictionaries
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined text search configurations
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined foreign-data wrappers
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined foreign servers
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading default privileges
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined collations
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading user-defined conversions
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading type casts
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading table inheritance information
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading event triggers
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: finding extension members
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: finding inheritance relationships
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading column info for interesting tables
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: flagging inherited columns in subtables
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading indexes
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading constraints
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading triggers
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading rewrite rules
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading large objects
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: reading dependency data
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: saving encoding = UTF8
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: saving standard_conforming_strings = on
+2014-05-27T12:37:27+00:00 app[pgbackups]: pg_dump: saving database definition
+2014-05-27T12:37:27+00:00 app[pgbackups]: dump_progress: 1.38kB 
+2014-05-27T12:37:27+00:00 app[pgbackups]: 
+2014-05-27T12:37:27+00:00 app[pgbackups]: dump_progress: 1.4KB
+2014-05-27T12:37:27+00:00 app[pgbackups]: dump_progress: done
+2014-05-27T12:37:27+00:00 app[pgbackups]: upload_progress: start
+2014-05-27T12:37:28+00:00 app[pgbackups]: upload_progress: 1.38kB 
+2014-05-27T12:37:28+00:00 app[pgbackups]: 
+2014-05-27T12:37:28+00:00 app[pgbackups]: upload_progress: 1.4KB
+2014-05-27T12:37:28+00:00 app[pgbackups]: upload_progress: done
+2014-05-27T12:37:28+00:00 app[pgbackups]: Finished: Tue May 27 12:37:26 UTC 2014
+2014-05-27T12:40:16.037793+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-27T12:40:17.363020+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T12:40:18.387045+00:00 app[web.1]: { domain: null,
+2014-05-27T12:40:18.387062+00:00 app[web.1]:   _events: {},
+2014-05-27T12:40:18.387064+00:00 app[web.1]:   _maxListeners: 10,
+2014-05-27T12:40:18.387065+00:00 app[web.1]:   user: 'sqgkvzosmjvier',
+2014-05-27T12:40:18.387066+00:00 app[web.1]:   database: 'd24odihcp1223b',
+2014-05-27T12:40:18.387068+00:00 app[web.1]:   port: 5432,
+2014-05-27T12:40:18.387069+00:00 app[web.1]:   host: 'ec2-54-221-227-25.compute-1.amazonaws.com',
+2014-05-27T12:40:18.387071+00:00 app[web.1]:   connection: 
+2014-05-27T12:40:18.387072+00:00 app[web.1]:    { domain: null,
+2014-05-27T12:40:18.387073+00:00 app[web.1]:      _events: 
+2014-05-27T12:40:18.387075+00:00 app[web.1]:       { connect: [Function],
+2014-05-27T12:40:18.387078+00:00 app[web.1]:         authenticationCleartextPassword: [Function],
+2014-05-27T12:40:18.387079+00:00 app[web.1]:         authenticationMD5Password: [Function],
+2014-05-27T12:40:18.387081+00:00 app[web.1]:         backendKeyData: [Object],
+2014-05-27T12:40:18.387083+00:00 app[web.1]:         readyForQuery: [Object],
+2014-05-27T12:40:18.387085+00:00 app[web.1]:         error: [Function],
+2014-05-27T12:40:18.387086+00:00 app[web.1]:         notice: [Function] },
+2014-05-27T12:40:18.387088+00:00 app[web.1]:      _maxListeners: 10,
+2014-05-27T12:40:18.387089+00:00 app[web.1]:      stream: 
+2014-05-27T12:40:18.387090+00:00 app[web.1]:       { _connecting: true,
+2014-05-27T12:40:18.387092+00:00 app[web.1]:         _handle: [Object],
+2014-05-27T12:40:18.387093+00:00 app[web.1]:         _readableState: [Object],
+2014-05-27T12:40:18.387094+00:00 app[web.1]:         readable: true,
+2014-05-27T12:40:18.387096+00:00 app[web.1]:         domain: null,
+2014-05-27T12:40:18.387098+00:00 app[web.1]:         _events: [Object],
+2014-05-27T12:40:18.387100+00:00 app[web.1]:         _maxListeners: 10,
+2014-05-27T12:40:18.387102+00:00 app[web.1]:         _writableState: [Object],
+2014-05-27T12:40:18.387103+00:00 app[web.1]:         writable: true,
+2014-05-27T12:40:18.387104+00:00 app[web.1]:         allowHalfOpen: false,
+2014-05-27T12:40:18.387106+00:00 app[web.1]:         onend: null,
+2014-05-27T12:40:18.387107+00:00 app[web.1]:         destroyed: false,
+2014-05-27T12:40:18.387108+00:00 app[web.1]:         bytesRead: 0,
+2014-05-27T12:40:18.387110+00:00 app[web.1]:         _bytesDispatched: 0,
+2014-05-27T12:40:18.387111+00:00 app[web.1]:         _pendingData: null,
+2014-05-27T12:40:18.387112+00:00 app[web.1]:         _pendingEncoding: '',
+2014-05-27T12:40:18.387114+00:00 app[web.1]:         pipe: [Function],
+2014-05-27T12:40:18.387116+00:00 app[web.1]:         addListener: [Function],
+2014-05-27T12:40:18.387117+00:00 app[web.1]:         on: [Function],
+2014-05-27T12:40:18.387119+00:00 app[web.1]:         pause: [Function],
+2014-05-27T12:40:18.387120+00:00 app[web.1]:         resume: [Function],
+2014-05-27T12:40:18.387121+00:00 app[web.1]:         read: [Function],
+2014-05-27T12:40:18.387123+00:00 app[web.1]:         _consuming: true },
+2014-05-27T12:40:18.387124+00:00 app[web.1]:      lastBuffer: false,
+2014-05-27T12:40:18.387125+00:00 app[web.1]:      lastOffset: 0,
+2014-05-27T12:40:18.387127+00:00 app[web.1]:      buffer: null,
+2014-05-27T12:40:18.387128+00:00 app[web.1]:      offset: null,
+2014-05-27T12:40:18.387129+00:00 app[web.1]:      encoding: 'utf8',
+2014-05-27T12:40:18.387130+00:00 app[web.1]:      parsedStatements: {},
+2014-05-27T12:40:18.387132+00:00 app[web.1]:      writer: 
+2014-05-27T12:40:18.387133+00:00 app[web.1]:       { size: 1024,
+2014-05-27T12:40:18.387135+00:00 app[web.1]:         buffer: <Buffer 00 00 00 00 00 00 00 00 70 60 96 00 00 00 00 00 6b 00 00 00 6c 00 00 00 38 b0 ca 01 00 00 00 00 20 c1 ce 01 00 00 00 00 00 00 00 00 79 19 00 00 50 41 cd ...>,
+2014-05-27T12:40:18.387137+00:00 app[web.1]:         offset: 5,
+2014-05-27T12:40:18.387139+00:00 app[web.1]:         headerPosition: 0 } },
+2014-05-27T12:40:18.387142+00:00 app[web.1]:   queryQueue: [],
+2014-05-27T12:40:18.387143+00:00 app[web.1]:   password: 'yUqd8Z4m_4yVk_jwLq-8sQx41l',
+2014-05-27T12:40:18.387146+00:00 app[web.1]:   binary: false,
+2014-05-27T12:40:18.387147+00:00 app[web.1]:   encoding: 'utf8',
+2014-05-27T12:40:18.387150+00:00 app[web.1]:   processID: null,
+2014-05-27T12:40:18.387152+00:00 app[web.1]:   secretKey: null }
+2014-05-27T12:40:18.436537+00:00 app[web.1]: listening on  14227
+2014-05-27T12:40:18.774122+00:00 heroku[web.1]: State changed from starting to up
+2014-05-27T13:04:34.757454+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=GET path=/ host=lintabapp.herokuapp.com request_id=bc3df126-3626-42b3-9a1d-87e97ffe671c fwd="92.249.185.97" dyno=web.1 connect=1ms service=11ms status=503 bytes=0
+2014-05-27T13:04:34.747064+00:00 app[web.1]: /app/web.js:13
+2014-05-27T13:04:34.746787+00:00 app[web.1]: 
+2014-05-27T13:04:34.747308+00:00 app[web.1]: require("http").createServer(function(req,res){res.write(JSON.stringify(client
+2014-05-27T13:04:34.747390+00:00 app[web.1]:                                                               ^
+2014-05-27T13:04:34.750270+00:00 app[web.1]: TypeError: Converting circular structure to JSON
+2014-05-27T13:04:34.750272+00:00 app[web.1]:     at Object.stringify (native)
+2014-05-27T13:04:34.750273+00:00 app[web.1]:     at Server.<anonymous> (/app/web.js:13:63)
+2014-05-27T13:04:34.750275+00:00 app[web.1]:     at Server.EventEmitter.emit (events.js:98:17)
+2014-05-27T13:04:34.750277+00:00 app[web.1]:     at HTTPParser.parser.onIncoming (http.js:2108:12)
+2014-05-27T13:04:34.750278+00:00 app[web.1]:     at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:121:23)
+2014-05-27T13:04:34.750280+00:00 app[web.1]:     at Socket.socket.ondata (http.js:1966:22)
+2014-05-27T13:04:34.750281+00:00 app[web.1]:     at TCP.onread (net.js:527:27)
+2014-05-27T13:04:34+00:00 heroku[slug-compiler]: Slug compilation started
+2014-05-27T13:04:35.799667+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-27T13:04:35.800708+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-27T13:04:37.526252+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T13:04:35.785913+00:00 heroku[web.1]: Process exited with status 8
+2014-05-27T13:04:39.011906+00:00 app[web.1]: { domain: null,
+2014-05-27T13:04:39.011925+00:00 app[web.1]:   _events: {},
+2014-05-27T13:04:39.011927+00:00 app[web.1]:   _maxListeners: 10,
+2014-05-27T13:04:39.011929+00:00 app[web.1]:   user: 'sqgkvzosmjvier',
+2014-05-27T13:04:39.011930+00:00 app[web.1]:   database: 'd24odihcp1223b',
+2014-05-27T13:04:39.011932+00:00 app[web.1]:   port: 5432,
+2014-05-27T13:04:39.011933+00:00 app[web.1]:   host: 'ec2-54-221-227-25.compute-1.amazonaws.com',
+2014-05-27T13:04:39.011935+00:00 app[web.1]:   connection: 
+2014-05-27T13:04:39.011936+00:00 app[web.1]:    { domain: null,
+2014-05-27T13:04:39.011938+00:00 app[web.1]:      _events: 
+2014-05-27T13:04:39.011939+00:00 app[web.1]:       { connect: [Function],
+2014-05-27T13:04:39.011941+00:00 app[web.1]:         authenticationCleartextPassword: [Function],
+2014-05-27T13:04:39.011943+00:00 app[web.1]:         authenticationMD5Password: [Function],
+2014-05-27T13:04:39.011944+00:00 app[web.1]:         backendKeyData: [Object],
+2014-05-27T13:04:39.011946+00:00 app[web.1]:         readyForQuery: [Object],
+2014-05-27T13:04:39.011947+00:00 app[web.1]:         error: [Function],
+2014-05-27T13:04:39.011948+00:00 app[web.1]:         notice: [Function] },
+2014-05-27T13:04:39.011950+00:00 app[web.1]:      _maxListeners: 10,
+2014-05-27T13:04:39.011951+00:00 app[web.1]:      stream: 
+2014-05-27T13:04:39.011953+00:00 app[web.1]:       { _connecting: true,
+2014-05-27T13:04:39.011954+00:00 app[web.1]:         _handle: [Object],
+2014-05-27T13:04:39.011955+00:00 app[web.1]:         _readableState: [Object],
+2014-05-27T13:04:39.011956+00:00 app[web.1]:         readable: true,
+2014-05-27T13:04:39.011958+00:00 app[web.1]:         domain: null,
+2014-05-27T13:04:39.011959+00:00 app[web.1]:         _events: [Object],
+2014-05-27T13:04:39.011960+00:00 app[web.1]:         _maxListeners: 10,
+2014-05-27T13:04:39.011962+00:00 app[web.1]:         _writableState: [Object],
+2014-05-27T13:04:39.011963+00:00 app[web.1]:         writable: true,
+2014-05-27T13:04:39.011964+00:00 app[web.1]:         allowHalfOpen: false,
+2014-05-27T13:04:39.011966+00:00 app[web.1]:         onend: null,
+2014-05-27T13:04:39.011967+00:00 app[web.1]:         destroyed: false,
+2014-05-27T13:04:39.011969+00:00 app[web.1]:         bytesRead: 0,
+2014-05-27T13:04:39.011970+00:00 app[web.1]:         _bytesDispatched: 0,
+2014-05-27T13:04:39.011971+00:00 app[web.1]:         _pendingData: null,
+2014-05-27T13:04:39.011972+00:00 app[web.1]:         _pendingEncoding: '',
+2014-05-27T13:04:39.011974+00:00 app[web.1]:         pipe: [Function],
+2014-05-27T13:04:39.011976+00:00 app[web.1]:         addListener: [Function],
+2014-05-27T13:04:39.011978+00:00 app[web.1]:         on: [Function],
+2014-05-27T13:04:39.011979+00:00 app[web.1]:         pause: [Function],
+2014-05-27T13:04:39.011980+00:00 app[web.1]:         resume: [Function],
+2014-05-27T13:04:39.011981+00:00 app[web.1]:         read: [Function],
+2014-05-27T13:04:39.011983+00:00 app[web.1]:         _consuming: true },
+2014-05-27T13:04:39.011984+00:00 app[web.1]:      lastBuffer: false,
+2014-05-27T13:04:39.011985+00:00 app[web.1]:      lastOffset: 0,
+2014-05-27T13:04:39.011986+00:00 app[web.1]:      buffer: null,
+2014-05-27T13:04:39.011988+00:00 app[web.1]:      offset: null,
+2014-05-27T13:04:39.011989+00:00 app[web.1]:      encoding: 'utf8',
+2014-05-27T13:04:39.011990+00:00 app[web.1]:      parsedStatements: {},
+2014-05-27T13:04:39.011991+00:00 app[web.1]:      writer: 
+2014-05-27T13:04:39.011993+00:00 app[web.1]:       { size: 1024,
+2014-05-27T13:04:39.011995+00:00 app[web.1]:         buffer: <Buffer 00 00 00 00 00 00 00 00 70 60 96 00 00 00 00 00 6b 00 00 00 6c 00 00 00 38 e0 63 01 00 00 00 00 20 f2 67 01 00 00 00 00 00 00 00 00 79 19 00 00 50 71 66 ...>,
+2014-05-27T13:04:39.011996+00:00 app[web.1]:         offset: 5,
+2014-05-27T13:04:39.011997+00:00 app[web.1]:         headerPosition: 0 } },
+2014-05-27T13:04:39.011998+00:00 app[web.1]:   queryQueue: [],
+2014-05-27T13:04:39.012000+00:00 app[web.1]:   password: 'yUqd8Z4m_4yVk_jwLq-8sQx41l',
+2014-05-27T13:04:39.012001+00:00 app[web.1]:   binary: false,
+2014-05-27T13:04:39.012002+00:00 app[web.1]:   encoding: 'utf8',
+2014-05-27T13:04:39.012003+00:00 app[web.1]:   processID: null,
+2014-05-27T13:04:39.012005+00:00 app[web.1]:   secretKey: null }
+2014-05-27T13:04:39.050945+00:00 app[web.1]: listening on  36642
+2014-05-27T13:04:39.637256+00:00 heroku[web.1]: State changed from starting to up
+2014-05-27T13:04:41.167780+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=19d49112-dd8d-47b5-a187-c2e896d26459 fwd="92.249.185.97" dyno=web.1 connect=3ms service=14ms status=503 bytes=0
+2014-05-27T13:04:41.156387+00:00 app[web.1]: 
+2014-05-27T13:04:41.157639+00:00 app[web.1]: require("http").createServer(function(req,res){res.write(JSON.stringify(client
+2014-05-27T13:04:41.157741+00:00 app[web.1]:                                                               ^
+2014-05-27T13:04:41.161949+00:00 app[web.1]: TypeError: Converting circular structure to JSON
+2014-05-27T13:04:41.161959+00:00 app[web.1]:     at Object.stringify (native)
+2014-05-27T13:04:41.161960+00:00 app[web.1]:     at Server.<anonymous> (/app/web.js:13:63)
+2014-05-27T13:04:41.161962+00:00 app[web.1]:     at Server.EventEmitter.emit (events.js:98:17)
+2014-05-27T13:04:41.161964+00:00 app[web.1]:     at HTTPParser.parser.onIncoming (http.js:2108:12)
+2014-05-27T13:04:41.161966+00:00 app[web.1]:     at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:121:23)
+2014-05-27T13:04:41.161967+00:00 app[web.1]:     at Socket.socket.ondata (http.js:1966:22)
+2014-05-27T13:04:41.161969+00:00 app[web.1]:     at TCP.onread (net.js:527:27)
+2014-05-27T13:04:41.156962+00:00 app[web.1]: /app/web.js:13
+2014-05-27T13:04:42.332037+00:00 heroku[web.1]: Process exited with status 8
+2014-05-27T13:04:42.345188+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-27T13:04:43.705490+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=lintabapp.herokuapp.com request_id=f800fcfa-33a7-4bb2-902f-6c0353e07a8c fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:43.775175+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=lintabapp.herokuapp.com request_id=de89fa14-427c-4c32-bbca-71a0e2a0bb03 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:44.056547+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=6f8bd96f-99df-43d7-a15d-d1b4f9c66563 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:46.803207+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=lintabapp.herokuapp.com request_id=08d0c9d5-4352-4059-b2cb-3cacd8fa96d7 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:47+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-05-27T13:04:47.175808+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=1926ebd1-11f3-4e66-980e-57de7a63c860 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:47.577415+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=lintabapp.herokuapp.com request_id=e790ad55-0934-4ce8-96a5-8bcd47b6f357 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:47.009412+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-27T13:04:46.865634+00:00 heroku[api]: Deploy 111dce4 by lintaba@gmail.com
+2014-05-27T13:04:46.865722+00:00 heroku[api]: Release v12 created by lintaba@gmail.com
+2014-05-27T13:04:49.798076+00:00 app[web.1]: /app/web.js:30
+2014-05-27T13:04:49.797782+00:00 app[web.1]: 
+2014-05-27T13:04:49.798332+00:00 app[web.1]:   }else if(query.ownid > 0 && query.uid > 0 && !query.save){
+2014-05-27T13:04:49.798337+00:00 app[web.1]:   ^
+2014-05-27T13:04:49.803802+00:00 app[web.1]: SyntaxError: Unexpected token }
+2014-05-27T13:04:49.803808+00:00 app[web.1]:     at Module._compile (module.js:439:25)
+2014-05-27T13:04:49.803809+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2014-05-27T13:04:49.803811+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2014-05-27T13:04:49.803813+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2014-05-27T13:04:49.803814+00:00 app[web.1]:     at Function.Module.runMain (module.js:497:10)
+2014-05-27T13:04:49.803816+00:00 app[web.1]:     at startup (node.js:119:16)
+2014-05-27T13:04:49.803817+00:00 app[web.1]:     at node.js:906:3
+2014-05-27T13:04:51.976143+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=fb8000c8-3f0b-49c4-aa22-f3a565e5de6f fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:52.277257+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=lintabapp.herokuapp.com request_id=44a0e56e-8b7c-4f8e-a223-441fbf1b5314 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:52.748938+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=2d5c63f2-a976-4ce9-b408-61be5108bdd8 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:51.166732+00:00 heroku[web.1]: State changed from starting to crashed
+2014-05-27T13:04:53.357741+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=lintabapp.herokuapp.com request_id=1cf36d67-d3e0-43d9-a7b0-2aeae937ab93 fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:53.744238+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=f8a13c42-b0fc-4446-aeeb-ca5ef6686a7b fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:04:48.898294+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T13:04:51.155572+00:00 heroku[web.1]: Process exited with status 8
+2014-05-27T13:05:59+00:00 heroku[slug-compiler]: Slug compilation started
+2014-05-27T13:06:04.599875+00:00 heroku[api]: Deploy 9253049 by lintaba@gmail.com
+2014-05-27T13:06:04.599875+00:00 heroku[api]: Release v13 created by lintaba@gmail.com
+2014-05-27T13:06:04+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-05-27T13:06:05.968251+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-27T13:06:08.556685+00:00 app[web.1]: listening on  27811
+2014-05-27T13:06:09.062854+00:00 heroku[web.1]: State changed from starting to up
+2014-05-27T13:06:09.697551+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=GET path=/ host=lintabapp.herokuapp.com request_id=876f80e7-ba7f-44e5-9cfb-8464bee6484a fwd="92.249.185.97" dyno=web.1 connect=3ms service=16ms status=503 bytes=0
+2014-05-27T13:06:09.682061+00:00 app[web.1]: /app/web.js:20
+2014-05-27T13:06:09.681714+00:00 app[web.1]: 
+2014-05-27T13:06:09.682328+00:00 app[web.1]:   var url_parts = url.parse(request.url, true);
+2014-05-27T13:06:09.682366+00:00 app[web.1]:                             ^
+2014-05-27T13:06:09.686238+00:00 app[web.1]: ReferenceError: request is not defined
+2014-05-27T13:06:09.686241+00:00 app[web.1]:     at Server.<anonymous> (/app/web.js:20:29)
+2014-05-27T13:06:09.686243+00:00 app[web.1]:     at Server.EventEmitter.emit (events.js:98:17)
+2014-05-27T13:06:09.686245+00:00 app[web.1]:     at HTTPParser.parser.onIncoming (http.js:2108:12)
+2014-05-27T13:06:09.686247+00:00 app[web.1]:     at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:121:23)
+2014-05-27T13:06:09.686248+00:00 app[web.1]:     at Socket.socket.ondata (http.js:1966:22)
+2014-05-27T13:06:09.686250+00:00 app[web.1]:     at TCP.onread (net.js:527:27)
+2014-05-27T13:06:10.848192+00:00 heroku[web.1]: State changed from up to crashed
+2014-05-27T13:06:07.508139+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T13:06:10.839031+00:00 heroku[web.1]: Process exited with status 8
+2014-05-27T13:06:15.082453+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=95d72a64-c5d8-463e-b43c-ef2117d26bcf fwd="92.249.185.97" dyno= connect= service= status=503 bytes=
+2014-05-27T13:06:46+00:00 heroku[slug-compiler]: Slug compilation started
+2014-05-27T13:06:51+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-05-27T13:06:51.224759+00:00 heroku[api]: Deploy 8275ec4 by lintaba@gmail.com
+2014-05-27T13:06:51.224841+00:00 heroku[api]: Release v14 created by lintaba@gmail.com
+2014-05-27T13:06:51.354071+00:00 heroku[web.1]: State changed from crashed to starting
+2014-05-27T13:06:52.705252+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T13:06:53.942216+00:00 app[web.1]: listening on  34283
+2014-05-27T13:06:54.648710+00:00 heroku[router]: at=info method=GET path=/ host=lintabapp.herokuapp.com request_id=7f97321d-01ba-4c55-85ba-a2a71734718e fwd="92.249.185.97" dyno=web.1 connect=1ms service=7ms status=200 bytes=115
+2014-05-27T13:06:54.910605+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=6be8476e-9e2e-457f-8f30-e3452dc937b6 fwd="92.249.185.97" dyno=web.1 connect=2ms service=3ms status=200 bytes=115
+2014-05-27T13:06:54.140929+00:00 heroku[web.1]: State changed from starting to up
+2014-05-27T13:06:56.049485+00:00 heroku[router]: at=info method=GET path=/ host=lintabapp.herokuapp.com request_id=211f8fc8-3a98-4213-bc03-c2882e210421 fwd="92.249.185.97" dyno=web.1 connect=1ms service=2ms status=200 bytes=115
+2014-05-27T13:06:56.277921+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=ee0711ca-4869-4271-a932-63762085462e fwd="92.249.185.97" dyno=web.1 connect=1ms service=6ms status=200 bytes=115
+2014-05-27T13:07:40.397115+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path=/?ownid=1&uid=1 host=lintabapp.herokuapp.com request_id=35ff04f9-16ed-4d3f-b260-3842416e92fb fwd="92.249.185.97" dyno=web.1 connect=1ms service=30001ms status=503 bytes=0
+2014-05-27T13:07:40.705176+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=3ace0530-4570-43c1-bc64-0f44f2390dd8 fwd="92.249.185.97" dyno=web.1 connect=1ms service=2ms status=200 bytes=115
+2014-05-27T13:10:37+00:00 heroku[slug-compiler]: Slug compilation started
+2014-05-27T13:10:38+00:00 heroku[slug-compiler]: Slug compilation failed: failed to compile Node.js app
+2014-05-27T13:11:08+00:00 heroku[slug-compiler]: Slug compilation started
+2014-05-27T13:11:12+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-05-27T13:11:13.080248+00:00 heroku[web.1]: State changed from up to starting
+2014-05-27T13:11:12.894022+00:00 heroku[api]: Deploy f2d575b by lintaba@gmail.com
+2014-05-27T13:11:12.894080+00:00 heroku[api]: Release v15 created by lintaba@gmail.com
+2014-05-27T13:11:16.342338+00:00 heroku[web.1]: State changed from starting to up
+2014-05-27T13:11:16.305216+00:00 app[web.1]: listening on  43234
+2014-05-27T13:11:15.041910+00:00 heroku[web.1]: Starting process with command `node web.js`
+2014-05-27T13:11:16.283810+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2014-05-27T13:11:18.347502+00:00 heroku[web.1]: Process exited with status 143
+2014-05-27T13:11:22.050377+00:00 heroku[router]: at=info method=GET path=/? host=lintabapp.herokuapp.com request_id=65c41ad5-09fa-4f70-ab33-fba19fa7e480 fwd="92.249.185.97" dyno=web.1 connect=1ms service=5ms status=200 bytes=115
+2014-05-27T13:11:22.332312+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=79a011a4-3419-4b5e-81dd-4dd3a54ecea6 fwd="92.249.185.97" dyno=web.1 connect=2ms service=2ms status=200 bytes=115
+2014-05-27T13:11:23.159662+00:00 heroku[router]: at=info method=GET path=/? host=lintabapp.herokuapp.com request_id=507db528-0d78-4752-acc9-f5aa9117be92 fwd="92.249.185.97" dyno=web.1 connect=1ms service=5ms status=200 bytes=115
+2014-05-27T13:11:23.428154+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=ae9fbbf4-b358-4c02-adaf-9c7ea8cd87f4 fwd="92.249.185.97" dyno=web.1 connect=12ms service=9ms status=200 bytes=115
+2014-05-27T13:11:23.811024+00:00 heroku[router]: at=info method=GET path=/? host=lintabapp.herokuapp.com request_id=18a77917-bbf9-48c0-bb4e-bc7fb2716cca fwd="92.249.185.97" dyno=web.1 connect=3ms service=5ms status=200 bytes=115
+2014-05-27T13:11:24.059036+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=lintabapp.herokuapp.com request_id=9d67b169-0cdc-42f2-a407-58c9585ec7b7 fwd="92.249.185.97" dyno=web.1 connect=3ms service=4ms status=200 bytes=115
+2014-05-27T13:12:12.490814+00:00 heroku[router]: at=error code=H15 desc="Idle connection" method=GET path=/?ownid=1&uid=1 host=lintabapp.herokuapp.com request_id=6a1fa086-e119-4c7a-b2c7-926d66ad23dc fwd="92.249.185.97" dyno=web.1 connect=1ms service=55023ms status=503 bytes=121

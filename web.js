@@ -4,7 +4,6 @@ var url = require('url');
 var port = process.env.PORT || 3000;
 
 
-var pgclient;
 var params = {
   host: 'ec2-54-221-227-25.compute-1.amazonaws.com',
   port: 5432,
@@ -19,16 +18,16 @@ client.connect();
 require("http").createServer(function(req, res) {
   var url_parts = url.parse(req.url, true);
   var query = url_parts.query;
-  if (query.ownid > 0 && query.uid > 0 && !query.save) {
+  if (query.ownid > 0 && query.uid > 0 && !query.text) {
     client.query("select * from mydata where ownid=" + query.ownid | 0 + " and uid=" + query.uid | 0, function(err, res) {
         if (err) {
-          res.end("sql hiba");
+          res.end("{error:'sql hiba'}");
         } else {
-          res.end("siker:" + JSON.stringify(result.rows[0]));
+          res.end(JSON.stringify(result.rows[0]));
       }
     });
     res.write("loading:"+query.ownid+", "+query.uid+"\n");
-  }else if(query.ownid > 0 && query.uid > 0 && !query.save){
+  }else if(query.ownid > 0 && query.uid > 0 && query.text){
     res.end("saveing...");
   }else{
     res.end("hi");
@@ -56,3 +55,9 @@ app.listen(port, function() {
   console.log("Listening on " + port);
 });
 */
+/*create table mydata (
+ownid integer,
+uid varchar(120),
+textfield text,
+updated date
+);*/
