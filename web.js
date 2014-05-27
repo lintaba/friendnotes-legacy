@@ -1,20 +1,63 @@
-var pg = require('pg');
+//source: https://github.com/madhums/node-express-mongoose-demo
+//license: MIT
+var express = require('express')
+  , fs = require('fs')
+  , passport = require('passport')
+  , pg = require('pg');
+
+var env = process.env.NODE_ENV || 'development'
+  , config = require('./config/config')[env]
+
+// Bootstrap db connection
+// Connect to mongodb
+var client;
+var connect = function () {
+  client = new pg.Client(config.db);
+  client.connect();
+}
+connect()
+
+// Error handler
+client.on('error', function (err) {
+  console.log(err)
+})
+
+
+// Bootstrap models
+var models_path = __dirname + '/app/models'
+fs.readdirSync(models_path).forEach(function (file) {
+  if (~file.indexOf('.js')) require(models_path + '/' + file)
+})
+
+// bootstrap passport config
+require('./config/passport')(passport, config)
+
+var app = express()
+// express settings
+require('./config/express')(app, config, passport)
+
+// Bootstrap routes
+require('./config/routes')(app, passport)
+
+// Start the app by listening on <port>
+var port = process.env.PORT || 3000
+app.listen(port)
+console.log('Express app started on port '+port)
+
+// expose app
+exports = module.exports = app
+
+
+
+/*
+
+
 var url = require('url');
 var express=require('express');
 var app=express();
 var port = process.env.PORT || 3000;
 app.listen(port,function(){console.log("listening on "+port);});
 
-var params = {
-  host: 'ec2-54-221-227-25.compute-1.amazonaws.com',
-  port: 5432,
-  user: 'sqgkvzosmjvier',
-  password: 'yUqd8Z4m_4yVk_jwLq-8sQx41l',
-  database: 'd24odihcp1223b',
-  ssl: true
-};
-var client = new pg.Client(params);
-client.connect();
 
 app.use(function(req, res, next){
   console.log('%s %s', req.method, req.url);
@@ -22,9 +65,10 @@ app.use(function(req, res, next){
 });
 app.use(express.static(__dirname+'/static'));
 
-app.get('/',function(req,res){
+app.get('/data.js',function(req,res){
 	res.send("hi");
 	console.log(req.query);
+
 });
 
 

@@ -1,15 +1,32 @@
 {
-  "name":    "facebook-template-node",
-  "version": "0.0.1",
+  "name":    "friend comments",
+  "version": "1.0",
 
-  "description": "Template app for Heroku / Facebook integration, Node.js language",
+  "description": "Comment for friends",
   "private":true,
-  "dependencies": {
-    "pg": "3.2.x",
-    "url": "latest",
-    "express":"4.x"
-  },
+  "author":"lintaba <lintaba@gmail.com>",
 
+  "dependencies": {
+    "url": "latest",
+    "express": "3.4.x",
+    "jade": "latest",
+    "pg": "3.2.x",
+    "connect-flash": "latest",
+    "passport": "latest",
+    "passport-facebook": "latest",
+    "imager": "latest",
+    "winston": "latest",
+    "notifier": "latest",
+    "async": "latest",
+    "view-helpers": "latest",
+    "forever": "latest"
+  },
+  "devDependencies": {
+    "supertest": "latest",
+    "should": "latest",
+    "mocha": "latest",
+    "nodemon": "latest"
+  },
   "engines": {
     "node": "0.10.x"
   }
