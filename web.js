@@ -9,7 +9,7 @@ var app = express.createServer(
   express.bodyParser(),
   express.cookieParser(),
   // set this to a secret value to encrypt session cookies
-  express.session({ secret: process.env.SESSION_SECRET || 'secret123' }),
+  express.session({ secret: process.env.SESSION_SECRET || 'secret223' }),
   require('faceplate').middleware({
     app_id: process.env.FACEBOOK_APP_ID,
     secret: process.env.FACEBOOK_SECRET,
@@ -23,6 +23,13 @@ var port = process.env.PORT || 3000;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
+
+var pgclient,pg = require('pg');
+
+pg.connect(process.env.DATABASE_URL||"postgres://sqgkvzosmjvier:yUqd8Z4m_4yVk_jwLq-8sQx41l@ec2-54-221-227-25.compute-1.amazonaws.com:5432/d24odihcp1223b", function(err, client) {
+  pgclient=client;
+});
+
 
 app.dynamicHelpers({
   'host': function(req, res) {
@@ -55,7 +62,7 @@ function render_page(req, res) {
     });
   });
 }
-
+/*
 function handle_facebook_request(req, res) {
 
   // if the user is logged in
@@ -98,6 +105,15 @@ function handle_facebook_request(req, res) {
     render_page(req, res);
   }
 }
-
-app.get('/', handle_facebook_request);
-app.post('/', handle_facebook_request);
+*/
+app.get('/', function(req,res){
+  pgclient.query('select * from db',function(err,res){
+    if(err){
+      res.end("hiba");
+    }else{
+      res.end("siker: "+JSON.stringify(result.rows));
+    }
+  });
+});
+app.post('/save', function(req,res){res.write(req.param("uid"));res.end("eol");});
+app.get('/save', function(req,res){res.write(req.param("uid"));res.end("eol");});
