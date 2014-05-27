@@ -1,7 +1,5 @@
-var express = require('express');
-var pg = require('pg');
 
-var app = express();
+var pg = require('pg');
 
 var port = process.env.PORT || 3000;
 
@@ -12,7 +10,10 @@ var client = new pg.Client(params);
 client.connect();
 console.log(client);
 
+require("http").createServer(function(req,res){res.write(JSON.stringify(client));res.end("hi");}).listen(port);
+console.log("listening on ",port);
 
+/*
 app.get('/', function(req,res){
   client.query('select * from db',function(err,res){
     if(err){
@@ -30,3 +31,4 @@ app.get('/save', function(req,res){res.write(req.param("uid"));res.end("eol");})
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
+*/
