@@ -1,6 +1,4 @@
-var async   = require('async');
 var express = require('express');
-var util    = require('util');
 var pg = require('pg');
 
 var app = express();
@@ -9,13 +7,14 @@ var port = process.env.PORT || 3000;
 
 
 var pgclient;
-pg.connect(process.env.DATABASE_URL||"postgres://sqgkvzosmjvier:yUqd8Z4m_4yVk_jwLq-8sQx41l@ec2-54-221-227-25.compute-1.amazonaws.com:5432/d24odihcp1223b", function(err, client) {
-  pgclient=client;
-});
+var params = { host: 'ec2-54-221-227-25.compute-1.amazonaws.com',port:5432,user: 'sqgkvzosmjvier',password: 'yUqd8Z4m_4yVk_jwLq-8sQx41l',database: 'd24odihcp1223b',ssl: true };
+var client = new pg.Client(params);
+client.connect();
+console.log(client);
 
 
 app.get('/', function(req,res){
-  pgclient.query('select * from db',function(err,res){
+  client.query('select * from db',function(err,res){
     if(err){
       res.end("hiba");
     }else{
