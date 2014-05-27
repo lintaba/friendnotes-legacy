@@ -1,8 +1,9 @@
 var pg = require('pg');
 var url = require('url');
-
+var express=require('express');
+var app=express();
 var port = process.env.PORT || 3000;
-
+app.listen(port,function(){console.log("listening on "+port);});
 
 var params = {
   host: 'ec2-54-221-227-25.compute-1.amazonaws.com',
@@ -15,6 +16,19 @@ var params = {
 var client = new pg.Client(params);
 client.connect();
 
+app.use(function(req, res, next){
+  console.log('%s %s', req.method, req.url);
+  next();
+});
+app.use(express.static(__dirname+'/static'));
+
+app.get('/',function(req,res){
+	res.send("hi");
+	console.log(req.query);
+});
+
+
+/*
 require("http").createServer(function(req, res) {
   var url_parts = url.parse(req.url, true);
   var query = url_parts.query;
@@ -32,8 +46,8 @@ require("http").createServer(function(req, res) {
   }else{
     res.end("hi");
   }
+})
 
-}).listen(port);
 console.log("listening on ", port);
 
 /*

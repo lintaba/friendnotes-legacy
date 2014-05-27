@@ -3,10 +3,11 @@
   "version": "0.0.1",
 
   "description": "Template app for Heroku / Facebook integration, Node.js language",
-
+  "private":true,
   "dependencies": {
-  "pg": "0.6.15",
-  "url": "latest"
+    "pg": "3.2.x",
+    "url": "latest",
+    "express":"4.x"
   },
 
   "engines": {
