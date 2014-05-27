@@ -27,6 +27,7 @@ require("http").createServer(function(req, res) {
           res.end("siker:" + JSON.stringify(result.rows[0]));
       }
     });
+    res.write("loading:"+query.ownid+", "+query.uid+"\n");
   }else if(query.ownid > 0 && query.uid > 0 && !query.save){
     res.end("saveing...");
   }else{
