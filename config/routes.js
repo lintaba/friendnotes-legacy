@@ -21,5 +21,5 @@ module.exports = function (app, passport) {
   var comment = require('../app/controllers/comment');
 
   app.get('/comment/:uid/:ownid', comment.index)
-  app.save('/save', comment.save)
+  app.post('/save', comment.save)
 }
