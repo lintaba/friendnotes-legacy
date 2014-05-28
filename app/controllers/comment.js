@@ -3,7 +3,6 @@ var utils = require('../../lib/utils')
   , extend = require('util')._extend
   , Comment=require('../models/comment')
 
-
 exports.index = function(req, res){
   Comment.load(req.params, function(err, items) {
     if (err){console.log(err); return res.render('500');}
