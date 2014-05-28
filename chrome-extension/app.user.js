@@ -33,14 +33,13 @@ window.domInsertion=function(e){
 		}
 		if(!uid){return;}
 		if(hld.querySelector(".edbx")){
-			return;
-		//	var a=hld.querySelector(".edbx");
-		//	a.parentNode.removeChild(a);
+			var a=hld.querySelector(".edbx");
+			a.parentNode.removeChild(a);
 		}
 		//console.log("dealing with ",uid)
 		var el=document.createElement("div");
 		el.className="_7lo _572u topborder uiBoxGray edbx";
-		el.innerHTML="<iframe width=345 border=0 src='"+config.server+"?uid="+uid+"&ownid="+ownid+"'></iframe>";
+		el.innerHTML="<iframe width=345 border=0 src='"+config.server+"comment/="+uid+"/"+ownid+"'></iframe>";
 		hld.appendChild(el);
 		/*el.innerHTML='<textarea style="width: 345px;resize: none;">loading...</textarea>';
 		(t=el.querySelector("textarea")).value=uid+" loading...";
