@@ -6,7 +6,8 @@ var utils = require('../../lib/utils')
 
 exports.index = function(req, res){
   Comment.load(req.params, function(err, items) {
-    if (err) return res.render('500')
+    if (err){console.log(err); return res.render('500');}
+console.log("resind:",err,items);
     res.render('comment', {
       title: 'Comment',
       items: items,
