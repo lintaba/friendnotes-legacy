@@ -10,7 +10,8 @@ var env = process.env.NODE_ENV || 'development'
 module.exports = {
 
   load:function(uid,callback){
-    callback(0,"work in progress, but id was ",uid);
+console.log("load",arguments);
+    callback(0,"work in progress, but id was "+uid+".");
   }
 
 }

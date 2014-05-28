@@ -4,7 +4,14 @@ var path = require('path')
 
 module.exports = {
   development: {
-    db: 'postgres://sqgkvzosmjvier:yUqd8Z4m_4yVk_jwLq-8sQx41l@ec2-54-221-227-25.compute-1.amazonaws.com:5432/d24odihcp1223b',
+    db: {
+  host: 'ec2-54-221-227-25.compute-1.amazonaws.com',
+  port: 5432,
+  user: 'sqgkvzosmjvier',
+  password: 'yUqd8Z4m_4yVk_jwLq-8sQx41l',
+  database: 'd24odihcp1223b',
+  ssl: true
+},
     root: rootPath,
     app: {
       name: 'Nodejs Express Mongoose Demo'
@@ -16,8 +23,15 @@ module.exports = {
     }
   },
   test: {
-    db: 'postgres://sqgkvzosmjvier:yUqd8Z4m_4yVk_jwLq-8sQx41l@ec2-54-221-227-25.compute-1.amazonaws.com:5432/d24odihcp1223b',
     root: rootPath,
+    db: {
+  host: 'ec2-54-221-227-25.compute-1.amazonaws.com',
+  port: 5432,
+  user: 'sqgkvzosmjvier',
+  password: 'yUqd8Z4m_4yVk_jwLq-8sQx41l',
+  database: 'd24odihcp1223b',
+  ssl: true
+},
     app: {
       name: 'Nodejs Express Mongoose Demo'
     },

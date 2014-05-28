@@ -19,9 +19,7 @@ exports.load = function(req, res, next, id){
 }
 
 exports.index = function(req, res){
-  var uid = req.uid;
-  var perPage = 30
-
+  var uid = req.params.uid;
   Comment.load(uid, function(err, items) {
     if (err) return res.render('500')
     res.render('comment', {

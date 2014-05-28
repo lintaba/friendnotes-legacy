@@ -3,7 +3,7 @@
 var express  = require('express')
   , fs 		 = require('fs')
   , passport = require('passport')
-  , pg 		 = require('pg');
+  , pg 		 = require('pg')
   , env 	 = process.env.NODE_ENV || 'development'
   , config 	 = require('./config/config')[env]
   , app 	 = express()
@@ -22,8 +22,8 @@ require('./config/passport')(passport, config)			// bootstrap passport config
 require('./config/express')(app, config, passport)		// express settings
 require('./config/routes')(app, passport)				// Bootstrap routes
 
-var port = process.env.PORT || 3000
-app.listen(port,function(){console.log('Express app started on port '+port)}
+var port = process.env.PORT || 3001
+app.listen(port,function(){console.log('Express app started on port '+port)});
 
 exports = module.exports = app							// expose app
 
