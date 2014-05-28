@@ -2,6 +2,6 @@ extends layouts/default
 
 block content
 	form
-		textarea(id='commentbox',name='comment')=items.comment
+		textarea(id='commentbox',name='comment',placeholder='Private notes')=items.comment
 		input(name='uid',type='hidden',value=req.uid)
 		input(name='ownid',type='hidden',value=req.ownid)
