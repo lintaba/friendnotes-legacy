@@ -14,7 +14,7 @@
     "pg": "3.2.x",
     "async": "latest",
     "view-helpers": "latest",
-    "cookie-parser":"latest",
+    "cookie-parser":"latest"
   },
   "engines": {
     "node": "0.10.x"
