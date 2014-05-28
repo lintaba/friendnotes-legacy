@@ -9,6 +9,7 @@
   "dependencies": {
     "url": "latest",
     "express": "3.4.x",
+    "express-session": "latest",
     "jade": "latest",
     "pg": "3.2.x",
     "connect-flash": "latest",
@@ -19,6 +20,7 @@
     "notifier": "latest",
     "async": "latest",
     "view-helpers": "latest",
+    "cookie-parser":"latest",
     "forever": "latest"
   },
   "devDependencies": {

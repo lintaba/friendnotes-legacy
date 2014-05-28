@@ -2,7 +2,7 @@
 //license: MIT
 var express = require('express')
   , fs = require('fs')
-  , passport = false,//require('passport')
+  , passport = require('passport')
   , pg = require('pg');
 
 var env = process.env.NODE_ENV || 'development'

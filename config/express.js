@@ -4,8 +4,9 @@
  */
 
 var express = require('express')
-  , flash = require('connect-flash')
-  , pkg = require('../package.json')
+  , flash   = require('connect-flash')
+  , pkg     = require('../package.json')
+  , session = require('express-session')
 
 var env = process.env.NODE_ENV || 'development'
 
@@ -42,14 +43,11 @@ module.exports = function (app, config, passport) {
     app.use(express.bodyParser())
     app.use(express.methodOverride())
 
-    // express/mongo session storage
-    app.use(express.session({
-      secret: pkg.name,
-      store: new mongoStore({
-        url: config.db,
-        collection : 'sessions'
-      })
-    }))
+app.use(session({
+    secret: 'keyboard cat'
+  , proxy: true // if you do SSL outside of node.
+  , cookie: { secure: true }
+}))
 
     // use passport session
     if(passport){
@@ -60,19 +58,6 @@ module.exports = function (app, config, passport) {
     // connect flash for flash messages - should be declared after sessions
     app.use(flash())
 
-    // should be declared after session and flash
-    /*app.use(helpers(pkg.name))
-
-    // adds CSRF support
-    if (process.env.NODE_ENV !== 'test') {
-      app.use(express.csrf())
-
-      // This could be moved to view-helpers :-)
-      app.use(function(req, res, next){
-        res.locals.csrf_token = req.csrfToken()
-        next()
-      })
-    }*/
 
     // routes should be at the last
     app.use(app.router)
