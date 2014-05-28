@@ -3,28 +3,21 @@ var utils = require('../../lib/utils')
   , extend = require('util')._extend
   , Comment=require('../models/comment')
 
-/**
- * Load
- */
-
-exports.load = function(req, res, next, id){
-  //var User = mongoose.model('User')
-
-  Comment.load(id, function (err, item) {
-    if (err) return next(err)
-    if (!item) return next(new Error('not found'))
-    req.item = item
-    next()
-  })
-}
 
 exports.index = function(req, res){
-  var uid = req.params.uid;
-  Comment.load(uid, function(err, items) {
+  Comment.load(req.params, function(err, items) {
     if (err) return res.render('500')
     res.render('comment', {
       title: 'Comment',
-      items: items
+      items: items,
+      req:req.params
     })
+  })
+}
+
+exports.save = function(req, res){
+  Comment.save(req.body, function(err, items) {
+    if (err) return res.render('500')
+    res.end("{'ok':1}");
   })
 }

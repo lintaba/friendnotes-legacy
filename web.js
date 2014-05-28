@@ -11,7 +11,7 @@ var express  = require('express')
 
 client.on('error', function (err) {console.log(err)})
 client.connect()
-
+GLOBAL.client=client;
 
 var models_path = __dirname + '/app/models'
 fs.readdirSync(models_path).forEach(function (file) {
@@ -27,9 +27,9 @@ app.listen(port,function(){console.log('Express app started on port '+port)});
 
 exports = module.exports = app							// expose app
 
-/*create table mydata (
+/*create table comments (
 ownid integer,
 uid varchar(120),
-textfield text,
+comment text,
 updated date
 );*/
