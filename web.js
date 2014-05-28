@@ -27,9 +27,13 @@ app.listen(port,function(){console.log('Express app started on port '+port)});
 
 exports = module.exports = app							// expose app
 
-/*create table comments (
-ownid integer,
+/*
+drop table comments;
+create table comments (
+ownid varchar(120),
 uid varchar(120),
 comment text,
 updated date
-);*/
+);
+
+*/
