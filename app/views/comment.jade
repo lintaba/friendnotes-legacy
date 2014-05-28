@@ -3,7 +3,8 @@ extends layouts/default
 
 block content
 	h1 test
+	=items
 	form
-		textarea(value=items.text, id='commentbox')
+		textarea(value=items.comment, id='commentbox')
 		input(name='uid',type='hidden',value=req.uid)
 		input(name='ownid',type='hidden',value=req.ownid)
