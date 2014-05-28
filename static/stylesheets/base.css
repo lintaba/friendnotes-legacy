@@ -4,4 +4,8 @@ body {
   -webkit-font-smoothing: antialiased;
   margin:0;padding:0;
 }
-
+textarea{
+  width:345px;
+  height:100px;
+  resize: none;
+}

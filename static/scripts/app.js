@@ -10,5 +10,5 @@ $(function(){
 	var send=function(){
 		$.ajax({url:"/save",type:"post",data:ConvertFormToJSON($("form"))});
 	}
-	$("#commentbox").on("change blur keyup",_.debounce(send,200));
+	$("#commentbox").on("change blur keyup",_.debounce(send,200)).focus();
 })

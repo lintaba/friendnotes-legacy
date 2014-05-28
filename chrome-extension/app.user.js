@@ -39,8 +39,9 @@ window.domInsertion=function(e){
 		//console.log("dealing with ",uid)
 		var el=document.createElement("div");
 		el.className="_7lo _572u topborder uiBoxGray edbx";
-		el.innerHTML="<iframe width=345 border=0 src='"+config.server+"comment/="+uid+"/"+ownid+"'></iframe>";
+		el.innerHTML="<iframe width='345' height='100' border='none' src='"+config.server+"comment/="+uid+"/"+ownid+"'></iframe>";
 		hld.appendChild(el);
+		el.focus();
 		/*el.innerHTML='<textarea style="width: 345px;resize: none;">loading...</textarea>';
 		(t=el.querySelector("textarea")).value=uid+" loading...";
 		t.setAttribute("disabled",true);
