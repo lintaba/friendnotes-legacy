@@ -12,9 +12,22 @@
     "express-session": "latest",
     "jade": "latest",
     "pg": "3.2.x",
+    "connect-flash": "latest",
+    "passport": "latest",
+    "passport-facebook": "latest",
+    "imager": "latest",
+    "winston": "latest",
+    "notifier": "latest",
     "async": "latest",
     "view-helpers": "latest",
     "cookie-parser":"latest",
+    "forever": "latest"
+  },
+  "devDependencies": {
+    "supertest": "latest",
+    "should": "latest",
+    "mocha": "latest",
+    "nodemon": "latest"
   },
   "engines": {
     "node": "0.10.x"
