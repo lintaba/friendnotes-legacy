@@ -11,6 +11,8 @@
     "express": "3.4.x",
     "express-session": "latest",
     "jade": "latest",
+    "passport": "latest",
+    "passport-facebook": "latest",
     "pg": "3.2.x",
     "async": "latest",
     "view-helpers": "latest",
