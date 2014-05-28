@@ -10,5 +10,5 @@ $(function(){
 	var send=function(){
 		$.ajax({url:"/save",type:"post",data:ConvertFormToJSON($("form"))});
 	}
-	$("#commentbox").change(_.debounce(send,500));
+	$("#commentbox").change(_.debounce(send,200));
 })
