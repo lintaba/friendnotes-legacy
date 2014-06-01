@@ -7,7 +7,8 @@ var express = require('express'),
     pkg = require('../package.json'),
     session = require('express-session')
 
-    var env = process.env.NODE_ENV || 'development'
+    ,
+    env = process.env.NODE_ENV || 'development'
 
 module.exports = function(app, config, passport) {
 
@@ -23,6 +24,7 @@ module.exports = function(app, config, passport) {
 
     app.use(express.favicon())
     app.use(express.static(config.root + '/static'))
+    app.use(express.static(config.root + '/chrome-extension/src'))
 
     // set views path, template engine and default layout
     app.set('views', config.root + '/app/views')
