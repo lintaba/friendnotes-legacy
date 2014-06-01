@@ -1,25 +1,31 @@
-var async=require('async')
-  , auth = require('./middlewares/authorization')
+var async = require('async'),
+    users = require('../app/models/users');
 
 
-module.exports = function (app, passport) {
- /* if(false && passport){
-    app.get('/auth/facebook',
-        passport.authenticate('facebook', {
-          scope: [ 'email', 'user_about_me'],
-          failureRedirect: '/login'
-        }), users.signin)
-      app.get('/auth/facebook/callback',
-        passport.authenticate('facebook', {
-          failureRedirect: '/login'
-        }), users.authCallback);
-    }*/
-    // home route
-  var site = require('../app/controllers/site');
-  app.get('/', site.index)
+module.exports = function(app, passport) {
 
-  var comment = require('../app/controllers/comment');
+    app.get('/', require('../app/controllers/site').index)
 
-  app.get('/comment/:uid/:ownid', comment.index)
-  app.post('/save', comment.save)
+    app.get('/login', function(req, res) {
+        res.redirect("/auth/facebook")
+    });
+    app.get('/auth/facebook', passport.authenticate('facebook', {
+        failureRedirect: '/login'
+    }), users.signin)
+    app.get('/auth/facebook/callback', passport.authenticate('facebook', {
+        failureRedirect: '/login'
+    }), users.authCallback)
+
+    var comment = require('../app/controllers/comment');
+    app.get('/comment/:uid', comment.index)
+    app.post('/save', comment.save)
+
+
+    app.get('/session', function(req, res) {
+        res.json({
+            session: req.session,
+            user: req.user,
+            passport: req.passport
+        });
+    });
 }

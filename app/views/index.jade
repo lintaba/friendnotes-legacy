@@ -1,4 +1,7 @@
 extends layouts/default
 
 block content
-	h1 facebook friend comments
+    h1 facebook friend comments
+    p
+      - if (!req.isAuthenticated())
+          a(href="/auth/facebook", title="Login") Login

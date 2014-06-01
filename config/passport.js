@@ -1,29 +1,34 @@
+var FacebookStrategy = require('passport-facebook').Strategy
 
 
-module.exports = function (passport, config) {
-  // require('./initializer')
+module.exports = function(passport, config) {
+    // require('./initializer')
 
-  // serialize sessions
-  /*
-  passport.serializeUser(function(user, done) {
-    done(null, user.id)
-  })
+    // serialize sessions
 
-  passport.deserializeUser(function(id, done) {
-    User.findOne({ _id: id }, function (err, user) {
-      done(err, user)
+    passport.serializeUser(function(user, done) {
+        done(null, user.id)
     })
-  })
 
-  // use local strategy
+    passport.deserializeUser(function(id, done) {
+        done(null, {
+            id: id
+        });
+    })
 
-  // use facebook strategy
-  passport.use(new FacebookStrategy({
-      clientID: config.facebook.clientID,
-      clientSecret: config.facebook.clientSecret,
-      callbackURL: config.facebook.callbackURL
-    },
-    function(accessToken, refreshToken, profile, done) {
+    // use local strategy
+
+    // use facebook strategy
+    passport.use(new FacebookStrategy({
+            clientID: config.facebook.clientID,
+            clientSecret: config.facebook.clientSecret,
+            callbackURL: config.facebook.callbackURL
+        },
+        function(accessToken, refreshToken, profile, done) {
+            done(null, {
+                id: profile.id
+            });
+            /*
       User.findOne({ 'facebook.id': profile.id }, function (err, user) {
         if (err) { return done(err) }
         if (!user) {
@@ -42,8 +47,8 @@ module.exports = function (passport, config) {
         else {
           return done(err, user)
         }
-      })
-    }
-  ))*/
+      })*/
+        }
+    ))
 
-  }
+}
