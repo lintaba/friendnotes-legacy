@@ -5,4 +5,9 @@ block content
     p
       - if (!req.isAuthenticated())
           a(href="/auth/facebook", title="Login") Login
-      a(href="app.user.js") Download extension
+      ol
+        li
+            a(href="app.user.js") Download extension
+        li navigate to about:extensions
+        li drag'n'drop the downloaded extension to this panel
+        li enjoy.
