@@ -13,7 +13,7 @@ window.domInsertion=function(e){
 		if(!uid){
 			uid=hld.querySelector("._h5y a")&&hld.querySelector("._h5y a").href.match(/facebook.com\/([a-zA-Z0-9_-]+)\?/)[1];
 		}
-		uid=uid.replace(/[^a-zA-Z0-9_-]/g,"");
+		uid=uid&&uid.replace(/[^a-zA-Z0-9_-]/g,"");
 		if(!uid){return;}
 		if(hld.querySelector(".edbx")){
 			var a=hld.querySelector(".edbx");

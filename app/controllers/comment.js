@@ -3,8 +3,7 @@ var Comment = require('../models/comment')
 exports.index = function(req, res) {
     if (!req.isAuthenticated()) {
         req.session.returnTo = '/comment/' + req.params.uid;
-        res.redirect('/auth/facebook');
-        return;
+        return res.render('login');
     }
 
     req.params.ownid = req.user.id;
@@ -24,8 +23,7 @@ exports.index = function(req, res) {
 exports.save = function(req, res) {
     if (!req.isAuthenticated()) {
         req.session.returnTo = '/comment/' + req.params.uid;
-        res.redirect('/auth/facebook');
-        return;
+        return res.render('login');
     }
     req.params.ownid = req.user.id;
     if (req.params.ownid != req.user.id) {
