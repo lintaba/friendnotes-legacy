@@ -1,0 +1,12 @@
+extends layouts/default
+
+block content
+    h2 Stats
+    p Aktiv felhasználók:
+        b
+            =stats.count
+        =" db"
+    p Összes bejegyzés:
+        b
+            =stats.sum
+        =" db"

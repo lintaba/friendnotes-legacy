@@ -1,10 +1,11 @@
-var async = require('async'),
-    users = require('../app/models/users');
-
+var async = require('async')
+  , users = require('../app/models/users')
+  , site  = require('../app/controllers/site')
 
 module.exports = function(app, passport) {
 
-    app.get('/', require('../app/controllers/site').index)
+    app.get('/', site.index)
+    app.get('/stats', site.stats)
 
     app.get('/login', function(req, res) {
         res.redirect("/auth/facebook")

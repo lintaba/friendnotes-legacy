@@ -51,6 +51,11 @@ var list=function list(data,callback){
 
 }
 return module.exports = {
+    totalCount:function(data,cb){
+        client.query("select count(*) \"count\",sum(d) \"sum\" from (select count(ownid) d from comments  group by ownid) as foo;",function(err,res){
+            cb(err,!err&&res&&res.rows&&res.rows[0]);
+        })
+    },
     load: load,
     save: save,
     list:list
