@@ -19,6 +19,7 @@ module.exports = function(app, passport) {
     var comment = require('../app/controllers/comment');
     app.get('/comment/:uid', comment.index)
     app.post('/save', comment.save)
+    app.get('/list', comment.list)
 
 
     app.get('/session', function(req, res) {

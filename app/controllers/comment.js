@@ -9,8 +9,8 @@ exports.index = function(req, res) {
     req.params.ownid = req.user.id;
     Comment.load(req.params, function(err, items) {
         if (err) {
-            console.log(err);
-            return res.render('500');
+            console.error(err);
+            return res.render('500',{error:err});
         }
         res.render('comment', {
             title: 'Comment',
@@ -26,11 +26,26 @@ exports.save = function(req, res) {
         return res.render('login');
     }
     req.params.ownid = req.user.id;
-    if (req.params.ownid != req.user.id) {
-        return res.redirect('/comment/' + req.params.uid);
-    }
     Comment.save(req.body, function(err, items) {
-        if (err) return res.render('500')
+        if (err) return res.render('500',{error:err})
         res.end("{'ok':1}");
     })
 }
+
+
+exports.list = function(req, res) {
+    if (!req.isAuthenticated()) {
+        req.session.returnTo = '/close';
+        return res.render('login');
+    }
+    req.params.ownid = req.user.id;
+    Comment.list(req.params, function(err, items) {
+        if (err) {
+            console.error(err);
+            return res.render('500',{error:err});
+        }
+        res.render('list', {
+            title: 'List of comments',
+            items: items
+        })
+    })}

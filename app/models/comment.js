@@ -41,7 +41,17 @@ var save = function save(data, callback) {
         })
     })
 }
+var list=function list(data,callback){
+    client.query("SELECT comment,uid FROM comments WHERE ownid='" + s(data.ownid) + "'", function(err, result) {
+        if (err) {
+            return callback(err);
+        }
+        callback(0, result.rows || []);
+    });
+
+}
 return module.exports = {
     load: load,
-    save: save
+    save: save,
+    list:list
 }
