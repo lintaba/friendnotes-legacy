@@ -2,7 +2,7 @@ var Comment = require('../models/comment')
 
 exports.index = function(req, res) {
     if (!req.isAuthenticated()) {
-        req.session.returnTo = '/comment/' + req.params.uid;
+        req.session.returnTo = '/close';
         return res.render('login');
     }
 
@@ -22,7 +22,7 @@ exports.index = function(req, res) {
 
 exports.save = function(req, res) {
     if (!req.isAuthenticated()) {
-        req.session.returnTo = '/comment/' + req.params.uid;
+        req.session.returnTo = '/close';
         return res.render('login');
     }
     req.params.ownid = req.user.id;

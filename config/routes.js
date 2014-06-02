@@ -28,4 +28,5 @@ module.exports = function(app, passport) {
             passport: req.passport
         });
     });
+    app.get('/close',function(req,res){res.end('<script>window.close();</script><a href="javascript:window.close();">close</a>');});
 }
