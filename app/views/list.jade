@@ -1,0 +1,12 @@
+extends layouts/default
+
+block content
+    h2 My notes
+    each item in items
+      li
+        a(href="//facebook.com/"+item.uid,target="_blank")
+            img(src="http://graph.facebook.com/"+item.uid+"/picture?type=square")
+
+        &nbsp;
+        span
+            =item.comment
