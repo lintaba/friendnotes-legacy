@@ -21,7 +21,8 @@
     "async": "latest",
     "view-helpers": "latest",
     "cookie-parser":"latest",
-    "forever": "latest"
+    "forever": "latest",
+    "jade-static": "latest"
   },
   "devDependencies": {
     "supertest": "latest",

@@ -10,6 +10,76 @@ var express = require('express'),
     ,
     env = process.env.NODE_ENV || 'development'
 
+var jadeStatic=function(){
+    var checkFileAndProcess, fs, jade, path, readAndSendTemplate;
+
+    path = require('path');
+    fs = require('fs');
+    jade = require('jade');
+    readAndSendTemplate = function(d, res, next) {
+      return fs.readFile(d, 'utf8', function(err, data) {
+        var html, template;
+        if (err != null) {
+          return next();
+        }
+        try {
+          template = jade.compile(data, {
+            filename: d
+          });
+          html = template(res.locals);
+          return res.send(html, {
+            'Content-Type': 'text/html'
+          }, 200);
+        } catch (_error) {
+          err = _error;
+          return next(err);
+        }
+      });
+    };
+
+    checkFileAndProcess = function(d, res, next) {
+      return fs.lstat(d, function(err, stats) {
+        if ((err == null) && stats.isFile()) {
+          return readAndSendTemplate(d, res, next);
+        } else {
+          return next();
+        }
+      });
+    };
+
+    return function(options) {
+      if (options == null) {
+        throw new Error("A path must be specified.");
+      }
+      if (typeof options === 'string') {
+        options = {
+          src: options,
+          html: true
+        };
+      }
+      if (typeof options.html === 'undefined') {
+        options.html = true;
+      }
+      return function(req, res, next) {
+        var d;
+        d = path.join(options.src, req.url)+".jade";
+        return fs.lstat(d, function(err, stats) {
+          if ((err == null) && stats.isDirectory()) {
+            return checkFileAndProcess("" + d + "/index.jade", res, next);
+          } else if ((err == null) && stats.isFile() && path.extname(d) === '.jade') {
+            return readAndSendTemplate(d, res, next);
+          } else if ((options.html != null) && path.extname(d) === '.html') {
+            return checkFileAndProcess(d.replace(/html$/, 'jade'), res, next);
+          } else {
+            return next();
+          }
+        });
+      };
+    };
+
+}()
+
+
 module.exports = function(app, config, passport) {
 
     app.set('showStackError', true)
@@ -25,7 +95,6 @@ module.exports = function(app, config, passport) {
     app.use(express.favicon())
     app.use(express.static(config.root + '/static'))
     app.use(express.static(config.root + '/chrome-extension/src'))
-
     // set views path, template engine and default layout
     app.set('views', config.root + '/app/views')
     app.set('view engine', 'jade')
@@ -44,15 +113,7 @@ module.exports = function(app, config, passport) {
         app.use(express.bodyParser())
         app.use(express.methodOverride())
 
-        app.use(session({
-            secret: "42"
-        }));
-
-        /*    app.use(session({
-        secret: pkg.name
-      , proxy: true // if you do SSL outside of node.
-      , cookie: { secure: true }
-    }))*/
+        app.use(session({secret: "42"}));
 
         // use passport session
         app.use(passport.initialize())
@@ -64,30 +125,20 @@ module.exports = function(app, config, passport) {
         // routes should be at the last
         app.use(app.router)
 
-        // assume "not found" in the error msgs
-        // is a 404. this is somewhat silly, but
-        // valid, you can do whatever you like, set
-        // properties, use instanceof etc.
+        app.use(jadeStatic(config.root+"/app/views/static/"))
+
+
         app.use(function(err, req, res, next) {
-            // treat as 404
             if (err.message && (~err.message.indexOf('not found') || (~err.message.indexOf('Cast to ObjectId failed')))) {
                 return next()
             }
-
-            // log it
-            // send emails if you want
-            console.log("stacktrace:");
-            console.error(err.stack)
-            console.log("err:", err);
-
-            // error page
+            console.error("500",req.originalUrl);
             res.status(500).render('500', {
                 error: err.stack
             })
         })
-
-        // assume 404 since no middleware responded
         app.use(function(req, res, next) {
+            console.error(404,req.originalUrl);
             res.status(404).render('404', {
                 url: req.originalUrl,
                 error: 'Not found'
