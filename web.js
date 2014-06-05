@@ -34,11 +34,20 @@ exports = module.exports = app							// expose app
 
 /*
 drop table comments;
+drop table rewrites;
 create table comments (
-ownid varchar(120),
-uid varchar(120),
-comment text,
-updated date
+	ownid varchar(120),
+	uid varchar(120),
+	comment text,
+	updated datetime,
+	primary key (ownid,uid)
+);
+
+create table rewrites (
+	ownid varchar(120),
+	uid varchar(120),
+	renamed varchar(120),
+	primary key (ownid,uid)
 );
 
 */

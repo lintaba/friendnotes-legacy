@@ -1,3 +1,28 @@
+// ==UserScript==
+// @name FriendNotes for facebook
+// @description Notes to friends on facebook
+// @author lintaba
+// @namespace http://lintabapp.herokuapp.com
+// @include http://*.facebook.com/*
+// @include http://facebook.com/*
+// @include https://*.facebook.com/*
+// @include https://facebook.com/*
+// @exclude http://*.channel.facebook.com/*
+// @exclude http://static.*.facebook.com/*
+// @exclude http://*.facebook.com/ai.php*
+// @exclude http://*.facebook.com/connect/*
+// @exclude https://*.channel.facebook.com/*
+// @exclude https://static.*.facebook.com/*
+// @exclude https://*.facebook.com/ai.php*
+// @exclude https://*.facebook.com/connect/*
+// @downloadURL https://lintabapp.herokuapp.com/src/app.user.js
+// @updateURL https://lintabapp.herokuapp.com/src/app.user.js
+// @icon https://lintabapp.herokuapp.com/images/icon.png
+// @icon https://lintabapp.herokuapp.com/images/icon.png
+// @version 1.2
+
+// ==/UserScript==
+
 var config={server:"//lintabapp.herokuapp.com/",version:"0.0.1"};
 
 if(!window.binded_lintaba){

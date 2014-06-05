@@ -1,4 +1,3 @@
-
 $(function(){
 		function ConvertFormToJSON(form){
 			var json = {};
@@ -11,4 +10,7 @@ $(function(){
 		$.ajax({url:"/save",type:"post",data:ConvertFormToJSON($("form"))});
 	}
 	$("#commentbox").on("change blur keyup",_.debounce(send,200)).focus();
+	$(".reload-after-focus").click(function(){
+		$(window).focus(function(){location.reload();})
+	})
 })

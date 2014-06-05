@@ -7,8 +7,10 @@
       "run_at": "document_start"
    } ],
    "description": "Notes to friends on facebook",
-   "name": "Facebook friend notes",
+   "name": "FriendNotes for facebook",
     "manifest_version": 2,
+    "author":"lintaba",
+    "icons":{"128":"icon.png"},
    "permissions": [ "http://lintabapp.herokuapp.com/*", "https://lintabapp.herokuapp.com/*", "http://*.facebook.com/*", "https://*.facebook.com/*" ],
-   "version": "1.1"
+   "version": "1.2"
 }

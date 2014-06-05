@@ -29,6 +29,9 @@ var save = function save(data, callback) {
     load(data, function(err, res) {
         if (err) return callback(err);
         var q;
+        if(data.comment==""){
+            q="delete from comments where uid='" + s(data.uid) + "' and ownid='" + s(data.ownid) + "'";
+        }else
         if (res.uid == data.uid) {
             q = "update comments set comment='" + s(data.comment) + "',updated=NOW() where uid='" + s(data.uid) + "' and ownid='" + s(data.ownid) + "'";
         } else {

@@ -1,5 +1,5 @@
 body {
-  color: #999;
+  color: #888;
   background: #eef;
   font: 14px/1.5em "Lucida Grande", Arial, sans-serif;
   margin:0;padding:0;
@@ -20,9 +20,10 @@ footer{
   text-align: center;
 }
 a{
-  color:#797;
+  color:#4a4;
   text-decoration: none;
 }
+a:hover{text-decoration: underline;}
 #wrap{
   margin:auto;
   max-width:600px;
