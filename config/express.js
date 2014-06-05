@@ -121,6 +121,7 @@ module.exports = function(app, config, passport) {
 
         // connect flash for flash messages - should be declared after sessions
         app.use(flash())
+    app.use(function(err,req,res,next){console.log(req);next();})
 
         // routes should be at the last
         app.use(app.router)

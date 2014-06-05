@@ -25,7 +25,7 @@ exports.save = function(req, res) {
         req.session.returnTo = '/close';
         return res.render('login');
     }
-    req.params.ownid = req.user.id;
+    req.body.ownid = req.user.id;
     Comment.save(req.body, function(err, items) {
         if (err) return res.render('500',{error:err})
         res.end("{'ok':1}");
