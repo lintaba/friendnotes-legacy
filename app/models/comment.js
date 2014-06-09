@@ -37,7 +37,7 @@ var save = function save(data, callback) {
         } else {
             q = "insert into comments values ('" + s(data.ownid) + "','" + s(data.uid) + "','" + s(data.comment) + "',NOW())";
         }
-        console.info(q.split(" ")[0]+" for own "+data.ownid+" cl="+data.comment.length);
+        console.info("\r\n<<"+(q.split(" ")[0])+" for own "+data.ownid+" cl="+data.comment.length+">>\r\n");
 
         if (cache[data.ownid + ":" + data.uid]) delete cache[data.ownid + ":" + data.uid];
         client.query(q, function(err, res) {

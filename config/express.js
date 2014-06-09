@@ -93,7 +93,12 @@ module.exports = function(app, config, passport) {
     }))
 
     app.use(express.favicon())
-    app.use(express.static(config.root + '/static'))
+
+    app.use(express.staticCache());
+    app.use(express.compress());
+
+
+    app.use(express.static(config.root + '/static', {maxAge: 86400000}))
     app.use(express.static(config.root + '/chrome-extension/src'))
     // set views path, template engine and default layout
     app.set('views', config.root + '/app/views')
