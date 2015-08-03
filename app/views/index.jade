@@ -9,14 +9,12 @@ block content
           a(href="/list", title="List") List
           |&nbsp;&bull;&nbsp;
           a(href="/logout", title="Logout") Logout
+          |&nbsp;&bull;&nbsp;
+          a(href="/manage", title="Manage") Manage
     h2 Chrome
     ol
       li
-          a(href="app.user.js") Download extension
-      li navigate to about:extensions
-      li drag'n'drop the downloaded extension to this panel
-      li enjoy.
-
+        a(href="#", onclick="chrome.app.install()") Add to Chrome
     h2 Firefox
     ol
       li
@@ -26,7 +24,7 @@ block content
       li enjoy.
     h2 Any other browser
     ol
-      li well.. you can download
+      li well.. you can download&nbsp;
         a(href="http://www.mozilla.org/en-US/firefox/new/") Firefox
         |&nbsp;or&nbsp;
         a(href="https://www.google.com/intl/en/chrome/browser/") chrome
