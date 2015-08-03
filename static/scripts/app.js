@@ -14,7 +14,7 @@ $(function(){
 	$(".reload-after-focus").click(function(){
 		$(window).focus(function(){location.reload();});
 	});
-})
+});
 
 
 
