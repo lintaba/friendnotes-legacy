@@ -7,28 +7,32 @@
   "author":"lintaba <lintaba@gmail.com>",
 
   "dependencies": {
-    "url": "latest",
     "express": "3.4.x",
     "express-session": "latest",
-    "jade": "latest",
-    "pg": "3.2.x",
-    "connect-flash": "latest",
     "passport": "latest",
     "passport-facebook": "latest",
-    "imager": "latest",
+    "connect-flash": "latest",
+    "connect-pg-simple": "latest",
+    "jade": "latest",
+    "jade-static": "latest",
+    "url": "latest",
+    "pg": "3.2.x",
     "winston": "latest",
     "notifier": "latest",
     "async": "latest",
     "view-helpers": "latest",
     "cookie-parser":"latest",
     "forever": "latest",
-    "jade-static": "latest"
+    "fbgraph": "latest"
   },
   "devDependencies": {
     "supertest": "latest",
     "should": "latest",
     "mocha": "latest",
     "nodemon": "latest"
+  },
+  "scripts": {
+    "start": "node web.js"
   },
   "engines": {
     "node": "0.10.x"
