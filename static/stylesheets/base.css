@@ -41,3 +41,8 @@ a:hover{text-decoration: underline;}
   box-shadow: 0 0 2px rgba(0,0,0,0.2);
   text-decoration: none;
 }
+
+.fit{
+  height: 100vh;
+  overflow: auto;
+}
