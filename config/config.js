@@ -21,7 +21,7 @@ module.exports = {
         facebook: {
             clientID: process.env.FACEBOOK_APP_ID,
             clientSecret: process.env.FACEBOOK_SECRET,
-            callbackURL: "http://dev.lintaba.hu:3001/auth/facebook/callback"
+            callbackURL: "https://dev.lintaba.hu:3001/auth/facebook/callback"
         }
     },
 
@@ -41,7 +41,7 @@ module.exports = {
         facebook: {
             clientID: process.env.FACEBOOK_APP_ID,
             clientSecret: process.env.FACEBOOK_SECRET,
-            callbackURL: "http://lintabapp.herokuapp.com/auth/facebook/callback"
+            callbackURL: "https://lintabapp.herokuapp.com/auth/facebook/callback"
         }
     }
 }
